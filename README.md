@@ -112,3 +112,12 @@ app.get('/', (req, res) => {
   res.send(page)
 })
 ~~~
+
+_No es necesario entender el código todavía._
+
+_El contenido de la pagina HTML ha sido guardado como un **template string**, o un string (cadena de texto) que permite, por ejemplo, evaluar variables dentro de ella. La parte de la página de inicio que cambia dinamicamente, el numero de notas guardadas (en el codigo `noteCount`), es remplazado por el numero actual de notas (en el codigo `notes.length`) en el template string._
+
+_En una aplicación web tradicional el navegador es un poco "tonto". Solo recupera el HTML del servidor, y toda la logica de la aplicación esta en el servidor. Un servidor puede ser creado, por ejemplo, usando Java Spring, Python Flask o con Ruby on Rails._
+
+_En este curso se utilizará Node.js y su framework Express para crear un servidor web._
+
