@@ -13,6 +13,6 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 
 _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se hablara de como evolucionó el desarrollo de aplicaciones web en las últimas décadas._
 
-### Fundamentos de las aplicaciones Web<a name="#fundamentos-app-web"></a>
+### Fundamentos de las aplicaciones Web<a name="#fundamentos-apps-web"></a>
 
 __
