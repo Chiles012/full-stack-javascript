@@ -2,10 +2,10 @@
 
 _Este proyecto sirve como una introducción al desarrollo moderno de aplicacion web con JavaScript, donde el foco principal esta puesto en construir SPAs (single page applications) con ReactJS que utilicen APIs REST construidas con Node.js. En este proyecto tambien se agregará una sección sobre GraphQL, una alternativa moderna a APIs REST._
 
-_Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de MongoDB para persistir los datos de la aplicación._
+_Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de MongoDB para persistir los datos de la aplicación, como así también TypeScript y finalmente una introducción a CI/CD._
 
 
-## Indice:
+### Indice:
 
 **Parte 0: Fundametos de las aplicaciones Webs**
 1. [Fundamentos de las aplicaciones Web](#-fundamentos-de-las-aplicaciones-web-)
@@ -14,7 +14,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
     * [La lógica de la aplicación corriendo en el navegador](#-la-lógica-de-la-aplicación-corriendo-en-el-navegador-)
     * [Control de eventos y funciones Callback](#-control-de-eventos-y-funciones-callback-)
     * [DOM o Modelo de Objetos del Documento](#-dom-o-modelo-de-objetos-del-documento-)
-    * [Manipulando el Objeto-Documento desde la consola](#-manipulando-el-objeto-documento-desde-la-consola-)
+    * [Manipulando el Document-Object desde la consola](#-manipulando-el-document-object-desde-la-consola-)
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
@@ -340,4 +340,34 @@ _Por último, la rama del árbol de la variable `ul` es colocada en el lugar apr
 document.getElementById('notes').appendChild(ul)
 ~~~
 
-#### 🔹🔹🔹 Manipulando el Objeto-Documento desde la consola 🔹🔹🔹
+#### 🔹🔹🔹 Manipulando el Document-Object desde la consola 🔹🔹🔹
+
+_El nodo principal del DOM del cual derivan el resto de nodos en un documento HTML es llamado `document` object (objeto document). Podemos realizar varias operaciones en una pagina web usando la DOM-API. Podemos acceder al objeto `document` desde la pestaña Console:_
+
+![document object](./img/part0/15e.png)
+
+_Vamos a agregar una nueva nota a la página desde la consola._
+
+_Primero debemos obtener la lista de notas de la página. La lista está en el primer elemento `ul` de la página:_
+
+~~~
+list = document.getElementsByTagName('ul')[0]
+~~~
+
+_Luego creamos un nuevo elemento `li` y le agregamos algun texto con el metodo de elementos `textContent`:_
+
+~~~
+newElement = document.createElement('li')
+newElement.textContent = 'Page manipulation from console is easy'
+~~~
+
+_Y finalmente agregamos el nuevo elemento li a la lista:_
+
+~~~
+list.appendChild(newElement)
+~~~
+
+![element added](./img/part0/16e.png)
+
+_Hay que aclarar que aunque la página se actualiza en el navegador con el nuevo elemento, el cambio no es permanente. Si la pagina es recargada, la nueva nota que agregamos a través de la consola desaparecerá debido a que los cambios no son hechos en el servidor sino en el navegador._
+
