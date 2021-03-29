@@ -21,7 +21,7 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
 
 <div id="#fundamentos-apps-web" />
 
-### 🔴 Fundamentos de las aplicaciones Web
+### 🔹🔹🔹 Fundamentos de las aplicaciones Web 🔹🔹🔹
 
 _A continuación podremos observar unas imágenes que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas practicas** _hoy en día._
 
@@ -39,7 +39,7 @@ _Es recomendable,en la pestaña Network, tener marcada la opcion de deshabilitar
 
 
 
-#### 🔴 HTTP GET
+#### 🔹🔹🔹 HTTP GET 🔹🔹🔹
 
 _El servidor y el navegador web se comunican uno con el otro mediante el protocolo [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP). La pestaña Network muestra como se comunican el navegador y el servidor._
 
@@ -87,7 +87,7 @@ _Aunque es dificil de notar, la página HTML comienza a renderizarse antes de qu
 
 
 
-#### 🔴 Aplicaciones web tradicionales
+#### 🔹🔹🔹 Aplicaciones web tradicionales 🔹🔹🔹
 
 _La página de inicio de la aplicacion de ejemplo funciona como una aplicacion web tradicional. Cuando uno entra a la página, el navegador recupera el documento HTML detallando la estructura y el contenido textual de la página desde el servidor._
 
@@ -130,7 +130,7 @@ _En este curso se utilizará Node.js y su framework Express para crear un servid
 
 
 
-#### 🔴 La lógica de la aplicación corriendo en el navegador
+#### 🔹🔹🔹 La lógica de la aplicación corriendo en el navegador 🔹🔹🔹
 
 _La siguiente imagen corresponde a la página notes, el navegador realiza cuatro solicitudes HTTP:_
 
@@ -251,7 +251,7 @@ _La pestaña Console y el comando `console.log` se convertiran en algo muy famil
 
 
 
-#### 🔴 Control de eventos y funciones Callback
+#### 🔹🔹🔹 Control de eventos y funciones Callback 🔹🔹🔹
 
 _La estructura de este código es un poco extraña:_
 
@@ -288,7 +288,7 @@ _Esta forma de llamar a los controladores de eventos en JavaScript es muy común
 
 
 
-#### 🔴 DOM o Modelo de Objetos del Documento 
+#### 🔹🔹🔹 DOM o Modelo de Objetos del Documento 🔹🔹🔹
 
 
 
