@@ -2,6 +2,18 @@
 
 _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se hablará de como evolucionó el desarrollo de aplicaciones web en las últimas décadas._
 
+  1. [Fundamentos de las aplicaciones Web](#-fundamentos-de-las-aplicaciones-web-)
+    * [HTTP GET](#-http-get-)
+    * [Aplicaciones web tradicionales](#-aplicaciones-web-tradicionales-)
+    * [La lógica de la aplicación corriendo en el navegador](#-la-lógica-de-la-aplicación-corriendo-en-el-navegador-)
+    * [Control de eventos y funciones Callback](#-control-de-eventos-y-funciones-callback-)
+    * [DOM o Modelo de Objetos del Documento](#-dom-o-modelo-de-objetos-del-documento-)
+    * [Manipulando el Document-Object desde la consola](#-manipulando-el-document-object-desde-la-consola-)
+    * [CSS](#-css-)
+    * [Cargando una página que contiene JavaScript](#-cargando-una-página-que-contiene-javascript)
+
+
+
 <div id="#fundamentos-apps-web" />
 
 ### 🔹🔹🔹 Fundamentos de las aplicaciones Web 🔹🔹🔹
@@ -44,7 +56,7 @@ _La parte de arriba, General, muestra que el navegador hizo una petición (reque
 
 _La petición y la respuesta del servidor tiene varios encabezados (headers):_
 
-![headers](./img/part0/4e.png)
+![headers](./img/4e.png)
 
 _Los response headers (encabezados de la respuesta) nos dicen, por ejemplo, el tamaño de la respuesta en bytes, y el tiempo exacto de la respuesta. Un encabezado importante es el [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) que nos dice que la respuesta es un archivo de texto en formato [utf-8](https://en.wikipedia.org/wiki/UTF-8), cuyo contenido ha sido formateado en HTML. De esta manera el navegador sabe que la respuesta es una pagina [HTML](https://en.wikipedia.org/wiki/HTML), y que debe renderizarlo en el navegador 'como una pagina web'._
 
@@ -403,8 +415,12 @@ _Cuando abrimos en el navegador una pagina como la de notas que contiene JavaScr
 
 ![secuence diagram js](./img/19e.png)
 
-* _El navegador recupera el codigo HTML que define el contenido y la estructura de la página desde el servidor utilizando una solicitud HTTP GET._
-* _Los links en el codigo HTML hacen que el navegador también recupere las hojas de estilo CSS, en este caso main.css._
+* _El navegador recupera el código HTML que define el contenido y la estructura de la página desde el servidor utilizando una solicitud HTTP GET._
+* _Los links en el código HTML hacen que el navegador también recupere las hojas de estilo CSS, en este caso, main.css._
 * _Y también el archivo de código JavaScript main.js._
-* _El navegador ejecuta el codigo JavaScript. El código hace una petición HTTP GET a la direccion https://fullstack-exampleapp.herokuapp.com/data.json que retorna las notas como datos JSON._
-* _Una vez que los datos han sido recuperados, el navegador ejecuta el controlador de envetos, que renderiza las notas en la página utilizando la DOM-API._
+* _El navegador ejecuta el código JavaScript. El código hace una petición HTTP GET a la dirección https://fullstack-exampleapp.herokuapp.com/data.json que retorna las notas como datos JSON._
+* _Una vez que los datos han sido recuperados, el navegador ejecuta el controlador de eventos, que renderiza las notas en la página utilizando la DOM-API._
+
+
+
+#### 🔹🔹🔹 Formularios y HTTP POST 🔹🔹🔹
