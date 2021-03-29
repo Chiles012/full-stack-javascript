@@ -13,7 +13,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
-_En esta parte se desarrollarán los conceptos basicos del desarrollo web y se hablara de como evolucionó el desarrollo de aplicaciones web en las últimas décadas._
+_En esta parte se desarrollarán los conceptos basicos del desarrollo web y se hablará de como evolucionó el desarrollo de aplicaciones web en las últimas décadas._
 
 <div id="#fundamentos-apps-web" />
 
@@ -50,3 +50,9 @@ _En una pantalla pequeña puede que se deba ampliar la ventana de la consola par
 _Clickeando en el primer evento hará que se nos muestre mas informacioón sobre lo que está sucediendo.:_
 
 ![event](./img/part0/3e.png)
+
+_La parte de arriba, General, muestra que el navegador hizo una petición (request) a la dirección https://fullstack-exampleapp.herokuapp.com usando el metodo GET, y que la petición fue exitosa, porque la respuesta del servido tiene un [Status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) **200**._
+
+_La petición y la respuesta del servidor tiene varios encabezados (headers):_
+
+![headers](./img/part0/4e.png)
