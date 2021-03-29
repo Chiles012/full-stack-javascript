@@ -17,4 +17,6 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
 
 ### Fundamentos de las aplicaciones Web<a name="#fundamentos-apps-web"></a>
 
-__
+_A continuación podremos observar unas imágenes en las que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ malas practicas _hoy en día._
+
+#### HTTP GET
