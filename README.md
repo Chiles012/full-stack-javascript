@@ -26,6 +26,20 @@ _Durante todo el proyecto se estará utilizando el navegador Chrome._
 
 _La console se ve de la siguiente manera:_
 
-![consola](./img/1e.png)
+![consola](./img/part0/1e.png)
+
+_Es recomendable,en la pestaña Network, tener marcada la opcion de deshabilitar el cache (Disable cache) como se muestra en la imagen, ya que de no hacerlo es muy probable que no veamos los cambios que realicemos a nuestro código. Preservar el log (Preserve log) puede ser muy util ya que guarda los logs ya mostrados por la aplicacion cuando la página es recargada._
+
+**Nota:** _La pestaña mas importante es la **Consola**. Sin embargo, en esta introducción se estará utilizando bastante la pestaña **Network**._
 
 #### HTTP GET
+
+_El servidor y el navegador web se comunican uno con el otro mediante el protocolo [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP). La pestaña Network muestra como se comunican el navegador y el servidor._
+
+_Cuando la pagina es recargada (presionando `F5` o en el simbolo ↺ del navegador), la consola muestra que dos eventos han sucedido:_
+
+* _El navegador recupera (fetch) el contenido de la pagina fullstack-exampleapp.herokuapp.com del servidor._
+
+* _Y descarga la imagen kuva.png_
+
+![fetches](./img/part0/2e.png)
