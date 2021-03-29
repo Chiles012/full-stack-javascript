@@ -9,7 +9,8 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 
 **Parte 0: Fundametos de las aplicaciones Webs**
 1. [Fundamentos de las aplicaciones Web](#fundamentos-de-las-aplicaciones-web)
-
+    * [HTTP GET](#http-get)
+    * [Aplicaciones web tradicionales](#aplicaciones-web-tradicionales)
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
@@ -78,3 +79,36 @@ _La cadena de eventos causada por abrir la página https://fullstack-exampleapp.
 _Primero, el navegador hace una solicitud HTTP GET al servidor para recuperar el codigo HTML de la pagina. El tag img en el HMTL le indica al navegador que debe recuperar la imagen kuva.png. El navegador renderiza la pagina HTML y la imagen en la pantalla._
 
 _Aunque es dificil de notar, la página HTML comienza a renderizarse antes de que la imagen sea recuperada del servidor._
+
+#### Aplicaciones web tradicionales
+
+_La página de inicio de la aplicacion de ejemplo funciona como una aplicacion web tradicional. Cuando uno entra a la página, el navegador recupera el documento HTML detallando la estructura y el contenido textual de la página desde el servidor._
+
+_El servidor ha formateado el documento de alguna manera. El documento puede ser una archivo de texto guardado en el directorio del servidor. El servidor tambien puede formar el documento HTML **dinamicamente** según el codigo de la aplicación, utilizando por ejemplo, datos de una base de datos. El codigo HTML de la aplicación de ejemplo ha sido formado dinamicamente, porque este contiene informacion sobre el número de notas creadas._
+
+_El codigo HTML de la pagina de inicio es el siguiente:_
+
+~~~
+const getFrontPageHtml = (noteCount) => {
+  return(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+      </head>
+      <body>
+        <div class='container'>
+          <h1>Full stack example app</h1>
+          <p>number of notes created ${noteCount}</p>
+          <a href='/notes'>notes</a>
+          <img src='kuva.png' width='200' />
+        </div>
+      </body>
+    </html>
+`)
+} 
+
+app.get('/', (req, res) => {
+  const page = getFrontPageHtml(notes.length)
+  res.send(page)
+})
+~~~
