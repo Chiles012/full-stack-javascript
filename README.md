@@ -8,7 +8,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 ## Indice:
 
 **Parte 0: Fundametos de las aplicaciones Webs**
-1. [Fundamentos de las aplicaciones Web](#fundamentos-apps-web)
+1. [Fundamentos de las aplicaciones Web](#fundamentos-de-las-aplicaciones-web)
 
 
 ## Parte 0: Fundamentos de las aplicaciones Web
@@ -16,6 +16,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se hablara de como evolucionó el desarrollo de aplicaciones web en las últimas décadas._
 
 <div id="#fundamentos-apps-web" />
+
 ### Fundamentos de las aplicaciones Web
 
 _A continuación podremos observar unas imágenes en las que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas practicas** _hoy en día._
