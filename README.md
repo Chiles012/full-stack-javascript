@@ -4,6 +4,11 @@ _Este proyecto sirve como una introducción al desarrollo moderno de aplicacion 
 
 _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de MongoDB para persistir los datos de la aplicación, como así también TypeScript y finalmente una introducción a CI/CD._
 
+_Esta es una recopilación hecha por mi de algunos de los conocimientos que fui adquiriendo, y está estructurado principalmente con el contenido desarrollado en el curso Full Stack del departamento de Ciencias de la Computación de la Universidad de Helsinki del año 2020_
+
+_Vale aclarar que este curso estará en constante actualización y que cualquier aporte es bienvenido._
+
+
 
 ### Indice:
 
@@ -15,3 +20,5 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
     * [Control de eventos y funciones Callback](https://github.com/szuviria/fullstackspanish/tree/master/part0#-control-de-eventos-y-funciones-callback-)
     * [DOM o Modelo de Objetos del Documento](https://github.com/szuviria/fullstackspanish/tree/master/part0#-dom-o-modelo-de-objetos-del-documento-)
     * [Manipulando el Document-Object desde la consola](https://github.com/szuviria/fullstackspanish/tree/master/part0#-manipulando-el-document-object-desde-la-consola-)
+    * [CSS](https://github.com/szuviria/fullstackspanish/tree/master/part0#-css-)
+    * [Cargando una página que contiene JavaScript](https://github.com/szuviria/fullstackspanish/tree/master/part0#-cargando-una-página-que-contiene-javascript)

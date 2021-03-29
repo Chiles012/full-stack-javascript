@@ -397,3 +397,14 @@ _La pestaña Elements de la consola puede ser usada para cambiar los estilos de 
 _Los cambios hechos en la consola no son permantes. Al igual que con los cambios en el DOM, si se quiere que los cambios de estilo sean permanentes deben ser guardados en el servidor._
 
 
+#### 🔹🔹🔹 Cargando una página que contiene JavaScript 🔹🔹🔹
+
+_Cuando abrimos en el navegador una pagina como la de notas que contiene JavaScript el diagrama de secuencia es el siguiente:_
+
+![secuence diagram js](./img/19e.png)
+
+* _El navegador recupera el codigo HTML que define el contenido y la estructura de la página desde el servidor utilizando una solicitud HTTP GET._
+* _Los links en el codigo HTML hacen que el navegador también recupere las hojas de estilo CSS, en este caso main.css._
+* _Y también el archivo de código JavaScript main.js._
+* _El navegador ejecuta el codigo JavaScript. El código hace una petición HTTP GET a la direccion https://fullstack-exampleapp.herokuapp.com/data.json que retorna las notas como datos JSON._
+* _Una vez que los datos han sido recuperados, el navegador ejecuta el controlador de envetos, que renderiza las notas en la página utilizando la DOM-API._
