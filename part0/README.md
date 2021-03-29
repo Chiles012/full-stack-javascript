@@ -353,3 +353,47 @@ list.appendChild(newElement)
 
 _Hay que aclarar que aunque la página se actualiza en el navegador con el nuevo elemento, el cambio no es permanente. Si la pagina es recargada, la nueva nota que agregamos a través de la consola desaparecerá debido a que los cambios no son hechos en el servidor sino en el navegador._
 
+
+
+#### 🔹🔹🔹 CSS 🔹🔹🔹
+
+_El elemento **head** de el código HTML de la pagina de Notas contiene un tag [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link), que le dice al navegador que debe recuperar un archivo de estilos CSS de la dirección main.css._
+
+_CSS (Cascading Style Sheets) que significa hojas de estilo en cascada, es un lenguaje de markup usado para determinar la apariencia de las páginas web._
+
+_El archivo CSS recuperado se ve de la siguiente manera:_
+
+~~~
+.container {
+  padding: 10px;
+  border: 1px solid; 
+}
+
+.notes {
+  color: blue;
+}
+~~~
+
+_El archivo define dos [selectores de clase](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). Estos son utilizados para seleccionar ciertas partes de la página y definir sus reglas de estilo para cambiar su apariencia._
+
+_Las **clases** son [atributos](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class), que pueden agregarse a los elementos HTML._
+
+_Los atributos CSS pueden examinarse en la pestaña Elements de la consola:_
+
+![css elements tab console](./img/17e.png)
+
+_El elemento **div** mas externo tiene la clase **container**. El elemento **ul** que contiene la lista de notas tiene la clase **notes**._
+
+_Las reglas de CSS definen que el elemento que tenga la clase container será delineado con un borde de un pixel de grosor. Este tambien tendrá un padding de 10 pixel que agrega un espacio vacio entre el contenido del elemento y el borde._
+
+_La segunda regla de CSS nombrada como **notes** configura el color del texto en azul._
+
+_Los elementos HTML tambien pueden tener otro atributos aparte de las clases. El elemento **div** que contiene las notas tiene un atributo [id](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id). El código JavaScript usa el atributo id para encontrar **un** elemento._
+
+_La pestaña Elements de la consola puede ser usada para cambiar los estilos de los elementos._
+
+![changing css](./img/18e.png)
+
+_Los cambios hechos en la consola no son permantes. Al igual que con los cambios en el DOM, si se quiere que los cambios de estilo sean permanentes deben ser guardados en el servidor._
+
+
