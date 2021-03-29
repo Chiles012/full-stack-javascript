@@ -11,7 +11,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 1. [Fundamentos de las aplicaciones Web](#fundamentos-de-las-aplicaciones-web)
     * [HTTP GET](#http-get)
     * [Aplicaciones web tradicionales](#aplicaciones-web-tradicionales)
-    * [La lógica de la aplicación corriendo en el navegador](#la-logica-de-la-aplicacion-corriendo-en-el-navegador)
+    * [La lógica de la aplicación corriendo en el navegador](#la-lógica-de-la-aplicación-corriendo-en-el-navegador)
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
