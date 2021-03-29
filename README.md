@@ -8,13 +8,13 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 ## Indice:
 
 **Parte 0: Fundametos de las aplicaciones Webs**
-1. [Fundamentos de las aplicaciones Web](#fundamentos-de-las-aplicaciones-web)
-    * [HTTP GET](#http-get)
-    * [Aplicaciones web tradicionales](#aplicaciones-web-tradicionales)
-    * [La lógica de la aplicación corriendo en el navegador](#la-lógica-de-la-aplicación-corriendo-en-el-navegador)
-    * [Control de eventos y funciones Callback](#control-de-eventos-y-funciones-callback)
-    * [DOM o Modelo de Objetos del Documento](#dom-o-modelo-de-objetos-del-documento)
-    * [Manipulando el Objeto-Documento desde la consola](#manipulando-el-objeto-documento-desde-la-consola)
+1. [Fundamentos de las aplicaciones Web](#-fundamentos-de-las-aplicaciones-web-)
+    * [HTTP GET](#-http-get-)
+    * [Aplicaciones web tradicionales](#-aplicaciones-web-tradicionales-)
+    * [La lógica de la aplicación corriendo en el navegador](#-la-lógica-de-la-aplicación-corriendo-en-el-navegador-)
+    * [Control de eventos y funciones Callback](#-control-de-eventos-y-funciones-callback-)
+    * [DOM o Modelo de Objetos del Documento](#-dom-o-modelo-de-objetos-del-documento-)
+    * [Manipulando el Objeto-Documento desde la consola](#-manipulando-el-objeto-documento-desde-la-consola-)
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
