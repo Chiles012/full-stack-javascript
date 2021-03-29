@@ -11,6 +11,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 1. [Fundamentos de las aplicaciones Web](#fundamentos-de-las-aplicaciones-web)
     * [HTTP GET](#http-get)
     * [Aplicaciones web tradicionales](#aplicaciones-web-tradicionales)
+    * [La lógica de la aplicación corriendo en el navegador](#la-logica-de-la-aplicacion-corriendo-en-el-navegador)
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
@@ -115,9 +116,127 @@ app.get('/', (req, res) => {
 
 _No es necesario entender el código todavía._
 
-_El contenido de la pagina HTML ha sido guardado como un **template string**, o un string (cadena de texto) que permite, por ejemplo, evaluar variables dentro de ella. La parte de la página de inicio que cambia dinamicamente, el numero de notas guardadas (en el codigo `noteCount`), es remplazado por el numero actual de notas (en el codigo `notes.length`) en el template string._
+_El contenido de la página HTML ha sido guardado como un **template string**, o un string (cadena de texto) que permite, por ejemplo, evaluar variables dentro de ella. La parte de la página de inicio que cambia dinámicamente, el número de notas guardadas (en el código `noteCount`), es remplazado por el número actual de notas (en el código `notes.length`) en el template string._
 
-_En una aplicación web tradicional el navegador es un poco "tonto". Solo recupera el HTML del servidor, y toda la logica de la aplicación esta en el servidor. Un servidor puede ser creado, por ejemplo, usando Java Spring, Python Flask o con Ruby on Rails._
+_En una aplicación web tradicional el navegador es un poco "tonto". Solo recupera el HTML del servidor, y toda la lógica de la aplicación esta en el servidor. Un servidor puede ser creado, por ejemplo, usando Java Spring, Python Flask o con Ruby on Rails._
 
 _En este curso se utilizará Node.js y su framework Express para crear un servidor web._
 
+#### La lógica de la aplicación corriendo en el navegador
+
+_La siguiente imagen corresponde a la página notes, el navegador realiza cuatro solicitudes HTTP:_
+
+![pagina notes](./img/part0/8e.png)
+
+_Todas las solicitudes tienen **diferentes tipos**. El tipo de la primer solicitud es **document**. Es el codigo HTML de la pagina, y se ve de la siguiente manera:_
+
+![first request](./img/part0/9e.png)
+
+_Cuando comparamos la página mostrada en el navegador y el código HTML devuelto por el servidor, notamos que el codigo no contiene la lista de notas. La sección [head](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) contiene un tag [script](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), que hace que el navegador recupere un archivo JavaScript llamado main.js._
+
+_El código JavaScript se ve de la siguiente manera:_
+
+~~~
+var xhttp = new XMLHttpRequest()
+
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    const data = JSON.parse(this.responseText)
+    console.log(data)
+
+    var ul = document.createElement('ul')
+    ul.setAttribute('class', 'notes')
+
+    data.forEach(function(note) {
+      var li = document.createElement('li')
+
+      ul.appendChild(li)
+      li.appendChild(document.createTextNode(note.content))
+    })
+
+    document.getElementById('notes').appendChild(ul)
+  }
+}
+
+xhttp.open('GET', '/data.json', true)
+xhttp.send()
+~~~
+
+_Los detalles del codigo no son importantes ahora, pero se agregó algo de codigo para darle vida a las imagenes y al texto. En la [parte 1]() se empezará a escribir codigo apropiadamente. El código de ejemplo utilizado en esta parte actualmente no es relevante para las tecnicas de desarrollo de este curso._
+
+>_Algunos podrían perguntarse porque se utiliza el objeto xhttp en lugar del fetch moderno. Esto se debe a que no queremos introducirnos en promesas por el momento, y el código tiene un rol secundario en esta parte. En la [parte 2]() volveremos a la manera moderna de realizar solicitudes al servidor._<
+
+_Inmediatamente después de recuperar el tag **script**, el navegador ejecuta el código._
+
+_Las últimas dos lineas definen que el navegador hace una solicitud HTTP GET a la dirección del servidor /data.json:_
+
+~~~
+xhttp.open('GET', '/data.json', true)
+xhttp.send()
+~~~
+
+_Esta es la solicitud es la mostrada al final de la lista en la pestaña Network._
+
+![data.json](./img/part0/10e.png)
+
+_Acá encontramos las notas en JSON como datos sin procesar. Por defecto, el navegador no es bueno mostrando datos JSON. Se puede utilizar plugins para manejar el formateo. Se puede instalar, por ejemplo, [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) en Chrome, y al recargar la página, los datos se mostrarán bien formateados:_
+
+![formatted json](./img/part0/11e.png)
+
+_Así, el código JavaScript de la página anterior de notas descarga los datos JSON que contienen las notas, y genera una lista a partir del contenido de la nota._
+
+_Esto está hecho por el siguiente código:_
+
+~~~
+const data = JSON.parse(this.responseText)
+console.log(data)
+
+var ul = document.createElement('ul')
+ul.setAttribute('class', 'notes')
+
+data.forEach(function(note) {
+  var li = document.createElement('li')
+
+  ul.appendChild(li)
+  li.appendChild(document.createTextNode(note.content))
+})
+
+document.getElementById('notes').appendChild(ul)
+~~~
+
+_El código primero crea una lista no ordenada con el tag [ul](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)..._
+
+~~~
+var ul = document.createElement('ul')
+ul.setAttribute('class', 'notes')
+~~~
+
+_...y luego cada nota es agregada a un tag [li](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li). Solo el valor **content** de cada nota se convierte en el contenido de el tag li. Los datos de las fechas no son utilizados en ningún lugar aquí._
+
+~~~
+data.forEach(function(note) {
+  var li = document.createElement('li')
+
+  ul.appendChild(li)
+  li.appendChild(document.createTextNode(note.content))
+})
+~~~
+
+_Ahora abrimos la pestaña Console en la consola de desarrollo:_
+
+![console](./img/part0/12e.png)
+
+_Clickeando en el pequeño triángulo al comienzo de la linea, se puede expandir el texto en al consola._
+
+![expand console](./img/part0/13e.png)
+
+_La salida de la consola es causada por el comando `console.log` en el código:_
+
+~~~
+const data = JSON.parse(this.responseText)
+console.log(data)
+~~~
+
+_Así, cuando se reciben los datos del servidor, el código lo muestra en la consola._
+
+_La pestaña Console y el comando `console.log` se convertiran en algo muy familiar durante el curso._
