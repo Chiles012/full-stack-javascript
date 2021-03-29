@@ -14,6 +14,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
     * [La lógica de la aplicación corriendo en el navegador](#la-lógica-de-la-aplicación-corriendo-en-el-navegador)
     * [Control de eventos y funciones Callback](#control-de-eventos-y-funciones-callback)
     * [DOM o Modelo de Objetos del Documento](#dom-o-modelo-de-objetos-del-documento)
+    * [Manipulando el Objeto-Documento desde la consola](#manipulando-el-objeto-documento-desde-la-consola)
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
@@ -290,5 +291,53 @@ _Esta forma de llamar a los controladores de eventos en JavaScript es muy común
 
 #### 🔹🔹🔹 DOM o Modelo de Objetos del Documento 🔹🔹🔹
 
+_Podemos pensar a las páginas HTML como estructuras de árbol._
 
+~~~
+html
+  head
+    link
+    script
+  body
+    div
+      h1
+      div
+        ul
+          li
+          li
+          li
+      form
+        input
+        input
+~~~
 
+_Esta misma estructura puede verse en la pestaña de la consola **Elements**._
+
+![elements console](./img/part0/14e.png)
+
+_Asi, el funcionamiento del navegador esta basado en la idea de representar los elementos HTML como un árbol._
+
+_El DOM es una Interfaz de Programación de Aplicaciones (mas conocida como API), que permite la modificación de los elementos del árbol correspondientes a las páginas webs a través de la programación._
+
+_El codigo JavaScript introducido previamente en este capítulo usa la DOM-API para agregar la lista de notas a la página._
+
+_El siguiente código crea un nuevo nodo en la variable `ul`, y agrega algunos nodos hijos a él:_
+
+~~~
+var ul = document.createElement('ul')
+
+data.forEach(function(note) {
+  var li = document.createElement('li')
+
+  ul.appendChild(li)
+  li.appendChild(document.createTextNode(note.content))
+})
+~~~
+
+_Por último, la rama del árbol de la variable `ul` es colocada en el lugar apropiado en el árbol del HTML de toda la página:_
+
+~~~
+document.getElementById('notes').appendChild(ul)
+~~~
+
+#### 🔹🔹🔹 Manipulando el Objeto-Documento desde la consola 🔹🔹🔹
