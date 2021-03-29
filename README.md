@@ -4,12 +4,12 @@ _Este proyecto sirve como una introducción al desarrollo moderno de aplicacion 
 
 _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de MongoDB para persistir los datos de la aplicación._
 
-'''
+```
 ## Indice:
 
 **Parte 0: Fundametos de las aplicaciones Webs**
 * [Fundamentos de las aplicaciones Web](#fundamentos-apps-web)
-'''
+```
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
