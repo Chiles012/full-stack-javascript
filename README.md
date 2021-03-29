@@ -8,7 +8,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 ## Indice:
 
 **Parte 0: Fundametos de las aplicaciones Webs**
-* [Fundamentos de las aplicaciones Web](#fundamentos-apps-web)
+1. [Fundamentos de las aplicaciones Web](#fundamentos-apps-web)
 
 
 ## Parte 0: Fundamentos de las aplicaciones Web
@@ -17,6 +17,14 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
 
 ### Fundamentos de las aplicaciones Web<a name="#fundamentos-apps-web"></a>
 
-_A continuación podremos observar unas imágenes en las que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ malas practicas _hoy en día._
+_A continuación podremos observar unas imágenes en las que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas practicas** _hoy en día._
+
+_Durante todo el proyecto se estará utilizando el navegador Chrome._
+
+**_La primera regla del desarrollo Web:_**_Siempre tener a la vista la Consola de Desarrollo abierta en tu navegador. En macOS, la consola se abre presionando `F12` o `option-cmd-i` simultaneamente. En Windows o Linux, la consola se abre presionando `F12` o `ctrl-shift-i` simultaneamente._
+
+_La console se ve de la siguiente manera:_
+
+![consola](./img/1e.png)
 
 #### HTTP GET
