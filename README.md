@@ -15,7 +15,7 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 
 _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se hablara de como evolucionó el desarrollo de aplicaciones web en las últimas décadas._
 
-<a name="#fundamentos-apps-web"></a>
+<div id="#fundamentos-apps-web" />
 ### Fundamentos de las aplicaciones Web
 
 _A continuación podremos observar unas imágenes en las que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas practicas** _hoy en día._
@@ -24,7 +24,7 @@ _Durante todo el proyecto se estará utilizando el navegador Chrome._
 
 **_La primera regla del desarrollo Web:_** _Siempre tener a la vista la Consola de Desarrollo abierta en tu navegador. En macOS, la consola se abre presionando `F12` o `option-cmd-i` simultaneamente. En Windows o Linux, la consola se abre presionando `F12` o `ctrl-shift-i` simultaneamente._
 
-_La console se ve de la siguiente manera:_
+_La consola se ve de la siguiente manera:_
 
 ![consola](./img/part0/1e.png)
 
@@ -43,3 +43,9 @@ _Cuando la pagina es recargada (presionando `F5` o en el simbolo ↺ del navegad
 * _Y descarga la imagen kuva.png_
 
 ![fetches](./img/part0/2e.png)
+
+_En una pantalla pequeña puede que se deba ampliar la ventana de la consola para verlo._
+
+_Clickeando en el primer evento hará que se nos muestre mas informacioón sobre lo que está sucediendo.:_
+
+![event](./img/part0/3e.png)
