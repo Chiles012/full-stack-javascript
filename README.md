@@ -7,11 +7,12 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
 
 ### Indice:
 
+https://github.com/szuviria/fullstackspanish/tree/master/part0#-fundamentos-de-las-aplicaciones-web-
 **Parte 0: Fundametos de las aplicaciones Webs**
-1. [Fundamentos de las aplicaciones Web](#-fundamentos-de-las-aplicaciones-web-)
-    * [HTTP GET](#-http-get-)
-    * [Aplicaciones web tradicionales](#-aplicaciones-web-tradicionales-)
-    * [La lógica de la aplicación corriendo en el navegador](#-la-lógica-de-la-aplicación-corriendo-en-el-navegador-)
-    * [Control de eventos y funciones Callback](#-control-de-eventos-y-funciones-callback-)
-    * [DOM o Modelo de Objetos del Documento](#-dom-o-modelo-de-objetos-del-documento-)
-    * [Manipulando el Document-Object desde la consola](#-manipulando-el-document-object-desde-la-consola-)
+1. [Fundamentos de las aplicaciones Web](/tree/master/part0#-fundamentos-de-las-aplicaciones-web-)
+    * [HTTP GET](/tree/master/part0#-http-get-)
+    * [Aplicaciones web tradicionales](/tree/master/part0#-aplicaciones-web-tradicionales-)
+    * [La lógica de la aplicación corriendo en el navegador](/tree/master/part0#-la-lógica-de-la-aplicación-corriendo-en-el-navegador-)
+    * [Control de eventos y funciones Callback](/tree/master/part0#-control-de-eventos-y-funciones-callback-)
+    * [DOM o Modelo de Objetos del Documento](/tree/master/part0#-dom-o-modelo-de-objetos-del-documento-)
+    * [Manipulando el Document-Object desde la consola](/tree/master/part0#-manipulando-el-document-object-desde-la-consola-)
