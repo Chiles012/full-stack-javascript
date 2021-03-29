@@ -12,6 +12,8 @@ _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de Mo
     * [HTTP GET](#http-get)
     * [Aplicaciones web tradicionales](#aplicaciones-web-tradicionales)
     * [La lógica de la aplicación corriendo en el navegador](#la-lógica-de-la-aplicación-corriendo-en-el-navegador)
+    * [Control de eventos y funciones Callback](#control-de-eventos-y-funciones-callback)
+    * [DOM o Modelo de Objetos del Documento](#dom-o-modelo-de-objetos-del-documento)
 
 ## Parte 0: Fundamentos de las aplicaciones Web
 
@@ -21,9 +23,9 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
 
 ### Fundamentos de las aplicaciones Web
 
-_A continuación podremos observar unas imágenes en las que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas practicas** _hoy en día._
+_A continuación podremos observar unas imágenes que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas practicas** _hoy en día._
 
-_Durante todo el proyecto se estará utilizando el navegador Chrome._
+_Durante todo el curso se estará utilizando el navegador Chrome._
 
 **_La primera regla del desarrollo Web:_** _Siempre tener a la vista la Consola de Desarrollo abierta en tu navegador. En macOS, la consola se abre presionando `F12` o `option-cmd-i` simultaneamente. En Windows o Linux, la consola se abre presionando `F12` o `ctrl-shift-i` simultaneamente._
 
@@ -34,6 +36,8 @@ _La consola se ve de la siguiente manera:_
 _Es recomendable,en la pestaña Network, tener marcada la opcion de deshabilitar el cache (Disable cache) como se muestra en la imagen, ya que de no hacerlo es muy probable que no veamos los cambios que realicemos a nuestro código. Preservar el log (Preserve log) puede ser muy util ya que guarda los logs ya mostrados por la aplicacion cuando la página es recargada._
 
 **Nota:** _La pestaña mas importante es la **Consola**. Sin embargo, en esta introducción se estará utilizando bastante la pestaña **Network**._
+
+
 
 #### HTTP GET
 
@@ -81,6 +85,8 @@ _Primero, el navegador hace una solicitud HTTP GET al servidor para recuperar el
 
 _Aunque es dificil de notar, la página HTML comienza a renderizarse antes de que la imagen sea recuperada del servidor._
 
+
+
 #### Aplicaciones web tradicionales
 
 _La página de inicio de la aplicacion de ejemplo funciona como una aplicacion web tradicional. Cuando uno entra a la página, el navegador recupera el documento HTML detallando la estructura y el contenido textual de la página desde el servidor._
@@ -121,6 +127,8 @@ _El contenido de la página HTML ha sido guardado como un **template string**, o
 _En una aplicación web tradicional el navegador es un poco "tonto". Solo recupera el HTML del servidor, y toda la lógica de la aplicación esta en el servidor. Un servidor puede ser creado, por ejemplo, usando Java Spring, Python Flask o con Ruby on Rails._
 
 _En este curso se utilizará Node.js y su framework Express para crear un servidor web._
+
+
 
 #### La lógica de la aplicación corriendo en el navegador
 
@@ -240,3 +248,47 @@ console.log(data)
 _Así, cuando se reciben los datos del servidor, el código lo muestra en la consola._
 
 _La pestaña Console y el comando `console.log` se convertiran en algo muy familiar durante el curso._
+
+
+
+#### Control de eventos y funciones Callback
+
+_La estructura de este código es un poco extraña:_
+
+~~~
+var xhttp = new XMLHttpRequest()
+
+xhttp.onreadystatechange = function() {
+  // el código dentro de esta funcion 
+  // se encarga de la respuesta del servidor
+}
+
+xhttp.open('GET', '/data.json', true)
+xhttp.send()
+~~~
+
+_La petición al servidor es enviada en la ultima linea, pero el código que maneja la respuesta se encuentra más arriba. Qué está pasando?_
+
+~~~
+xhttp.onreadystatechange = function () {
+~~~
+
+_En esta linea, un controlador de eventos (event handler) **onreadystatechange** es definido para el objeto `xhttp` haciendo la petición. Cuando el estado del objeto cambia, el navegador llama a la funcion controladora de eventos. El codigo de la función verifica que el [`readyState`](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState) sea igual a 4 (que significa que **la operación esta completada**) y que el codigo de estado HTTP (status code) de la respuesta es **200**._
+
+~~~
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    // el código dentro de esta funcion 
+    // se encarga de la respuesta del servidor
+  }
+}  
+~~~
+
+_Esta forma de llamar a los controladores de eventos en JavaScript es muy común. Las funciones controladoras de eventos (event handler functions) son llamadas funciones de [Callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function). El codigo de la aplicación no llama por si mismo a la función, sino que lo hace el entorno de ejecución (runtime enviroment), que en este caso seria el navegador. Asi, cada vez que ocurre el evento, el navegador llama a la función en el momento apropiado._
+
+
+
+#### DOM o Modelo de Objetos del Documento
+
+
+
