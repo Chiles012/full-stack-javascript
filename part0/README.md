@@ -52,7 +52,7 @@ _Clickeando en el primer evento hará que se nos muestre mas informacioón sobre
 
 ![event](./img/3e.png)
 
-_La parte de arriba, General, muestra que el navegador hizo una petición (request) a la dirección https://fullstack-exampleapp.herokuapp.com usando el método GET, y que la petición fue exitosa, porque la respuesta del servidor tiene un [Status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) **200**._
+_La parte de arriba, General, muestra que el navegador hizo una petición (request) a la dirección `https://fullstack-exampleapp.herokuapp.com` usando el método GET, y que la petición fue exitosa, porque la respuesta del servidor tiene un [Status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) **200**._
 
 _La petición y la respuesta del servidor tiene varios encabezados (headers):_
 
@@ -64,19 +64,19 @@ _La pestaña Response (respuesta) muestra los datos de la respuesta, una página
 
 ![headers](./img/5e.png)
 
-_La página contiene un elemento [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div), que dentro contiene un heading (encabezado), un link a una página notes, y un tag [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img), y muestra el número de notas creadas._
+_La página contiene un elemento [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div), que dentro contiene un heading (encabezado), un link a una página notes, y una etiqueta [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img), y muestra el número de notas creadas._
 
-_Debido al tag img, el navegador realiza una segunda petición HTTP para recuperar la imagen kuva.png de el servidor. El detalle de la petición es el siguiente:_
+_Debido a la etiqueta img, el navegador realiza una segunda petición HTTP para recuperar la imagen kuva.png de el servidor. El detalle de la petición es el siguiente:_
 
-![img tag](./img/6e.png)
+![img etiqueta](./img/6e.png)
 
-_La petición se realizó a la dirección https://fullstack-exampleapp.herokuapp.com/kuva.png y su tipo es HTTP GET. El encabezado de la respuesta nos dice que el tamaño de la respuesta es de 89350 bytes, y su [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) es image/png, asi que es una imagen png. El navegador usa esta información para renderizar la imagen correctamente en la pantalla._
+_La petición se realizó a la dirección `https://fullstack-exampleapp.herokuapp.com/kuva.png` y su tipo es HTTP GET. El encabezado de la respuesta nos dice que el tamaño de la respuesta es de 89350 bytes, y su [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) es image/png, asi que es una imagen png. El navegador usa esta información para renderizar la imagen correctamente en la pantalla._
 
-_La cadena de eventos causada por abrir la página https://fullstack-exampleapp.herokuapp.com en el navegador genera el siguiente [diagrama de secuencia](https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/):_
+_La cadena de eventos causada por abrir la página `https://fullstack-exampleapp.herokuapp.com` en el navegador genera el siguiente [diagrama de secuencia](https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/):_
 
 ![secuence diagram](./img/7e.png)
 
-_Primero, el navegador hace una solicitud HTTP GET al servidor para recuperar el codigo HTML de la pagina. El tag img en el HMTL le indica al navegador que debe recuperar la imagen kuva.png. El navegador renderiza la pagina HTML y la imagen en la pantalla._
+_Primero, el navegador hace una solicitud HTTP GET al servidor para recuperar el codigo HTML de la pagina. La etiqueta img en el HMTL le indica al navegador que debe recuperar la imagen kuva.png. El navegador renderiza la pagina HTML y la imagen en la pantalla._
 
 _Aunque es dificil de notar, la página HTML comienza a renderizarse antes de que la imagen sea recuperada del servidor._
 
@@ -135,7 +135,7 @@ _Todas las solicitudes tienen **diferentes tipos**. El tipo de la primer solicit
 
 ![first request](./img/9e.png)
 
-_Cuando comparamos la página mostrada en el navegador y el código HTML devuelto por el servidor, notamos que el codigo no contiene la lista de notas. La sección [head](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) contiene un tag [script](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), que hace que el navegador recupere un archivo JavaScript llamado main.js._
+_Cuando comparamos la página mostrada en el navegador y el código HTML devuelto por el servidor, notamos que el codigo no contiene la lista de notas. La sección [head](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) contiene una etiqueta [script](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), que hace que el navegador recupere un archivo JavaScript llamado main.js._
 
 _El código JavaScript se ve de la siguiente manera:_
 
@@ -169,7 +169,7 @@ _Los detalles del codigo no son importantes ahora, pero se agregó algo de codig
 
 >_Algunos podrían perguntarse porque se utiliza el objeto xhttp en lugar del fetch moderno. Esto se debe a que no queremos introducirnos en promesas por el momento, y el código tiene un rol secundario en esta parte. En la [parte 2]() volveremos a la manera moderna de realizar solicitudes al servidor._<
 
-_Inmediatamente después de recuperar el tag **script**, el navegador ejecuta el código._
+_Inmediatamente después de recuperar la etiqueta **script**, el navegador ejecuta el código._
 
 _Las últimas dos lineas definen que el navegador hace una solicitud HTTP GET a la dirección del servidor /data.json:_
 
@@ -207,14 +207,14 @@ data.forEach(function(note) {
 document.getElementById('notes').appendChild(ul)
 ~~~
 
-_El código primero crea una lista no ordenada con el tag [ul](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)..._
+_El código primero crea una lista no ordenada con la etiqueta [ul](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)..._
 
 ~~~
 var ul = document.createElement('ul')
 ul.setAttribute('class', 'notes')
 ~~~
 
-_...y luego cada nota es agregada a un tag [li](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li). Solo el valor **content** de cada nota se convierte en el contenido de el tag li. Los datos de las fechas no son utilizados en ningún lugar aquí._
+_...y luego cada nota es agregada a una etiqueta [li](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li). Solo el valor **content** de cada nota se convierte en el contenido de la etiqueta li. Los datos de las fechas no son utilizados en ningún lugar aquí._
 
 ~~~
 data.forEach(function(note) {
@@ -369,7 +369,7 @@ _Hay que aclarar que aunque la página se actualiza en el navegador con el nuevo
 
 #### 🔹🔹🔹 CSS 🔹🔹🔹
 
-_El elemento **head** de el código HTML de la pagina de Notas contiene un tag [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link), que le dice al navegador que debe recuperar un archivo de estilos CSS de la dirección main.css._
+_El elemento **head** de el código HTML de la pagina de Notas contiene una etiqueta [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link), que le dice al navegador que debe recuperar un archivo de estilos CSS de la dirección main.css._
 
 _CSS (Cascading Style Sheets) que significa hojas de estilo en cascada, es un lenguaje de markup usado para determinar la apariencia de las páginas web._
 
@@ -418,7 +418,7 @@ _Cuando abrimos en el navegador una página como la de notas que contiene JavaSc
 * _El navegador recupera el código HTML que define el contenido y la estructura de la página desde el servidor utilizando una solicitud HTTP GET._
 * _Los links en el código HTML hacen que el navegador también recupere las hojas de estilo CSS, en este caso, main.css._
 * _Y también el archivo de código JavaScript main.js._
-* _El navegador ejecuta el código JavaScript. El código hace una petición HTTP GET a la dirección https://fullstack-exampleapp.herokuapp.com/data.json que retorna las notas como datos JSON._
+* _El navegador ejecuta el código JavaScript. El código hace una petición HTTP GET a la dirección `https://fullstack-exampleapp.herokuapp.com/data.json` que retorna las notas como datos JSON._
 * _Una vez que los datos han sido recuperados, el navegador ejecuta el controlador de eventos, que renderiza las notas en la página utilizando la DOM-API._
 
 
@@ -447,7 +447,7 @@ _La pestaña Network también muestra la información enviada en el formulario:_
 
 ![form submit data](./img/23e.png)
 
-_El tag Form tiene como atributos **action** y **method**, que definen que el envio del formulario debe hacerse como una petición POST a la dirección `/new_notes`._
+_La etiqueta Form tiene como atributos **action** y **method**, que definen que el envio del formulario debe hacerse como una petición POST a la dirección `/new_notes`._
 
 ![form attr](./img/24e.png)
 
@@ -493,8 +493,88 @@ _Antes de esto, todas las páginas funcionaban como la aplicación web tradicion
 
 _La pagina Notas utiliza AJAX para recuperar los datos de las notas. El envio del formulario utiliza el mecanismo tradicional._
 
-_Las URLs de la aplicación son un claro reflejo de los viejos tiempos sin preocupaciones. Los datos JSON son recuperados directamente de la url https://fullstack-exampleapp.herokuapp.com/data.json y las nuevas notas son enviadas a la URL https://fullstack-exampleapp.herokuapp.com/new\_note._
+_Las URLs de la aplicación son un claro reflejo de los viejos tiempos sin preocupaciones. Los datos JSON son recuperados directamente de la url `https://fullstack-exampleapp.herokuapp.com/data.json` y las nuevas notas son enviadas a la URL `https://fullstack-exampleapp.herokuapp.com/new_note`._
 _Hoy en dia URLs como estas no son concideradas aceptables, ya que no siguen las conveciones de las APIs [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_Web_services), que se veran en profundidad en la parte 3._
 
 _Lo que se denomina AJAX ahora es tan común que se da por sentado, y así el termino se desvanecio en el olvido y la nueva generación ni siquiera escuchó hablar de esto._
 
+
+
+#### 🔹🔹🔹 SPA, aplicaciones de una página 🔹🔹🔹
+
+_En la app de ejemplo, la página de inicio trabaja como una página web tradicional: Toda la lógica esta en el servidor, y el navegador solo renderiza el HTML como se le indica._
+
+_La página de notas le da algo de responsabilidad al navegador al generar el codigo HTML para cada nota existente. Esta tarea la realiza ejecutando el código JavaScript que obtuvo del servidor. El código recupera las notas del servidor como datos JSON y agrega elementos HTML para mostrar las notas en la página utilizando la [DOM-API](#-dom-o-modelo-de-objetos-del-documento-)._
+
+_En los últimos años ha surgido el estilo de aplicaciones de una sola página (SPA) para crear aplicaciones web. Los sitios web de estilo SPA no  obtienen todas sus paginas por separado del servidor como lo hace la aplicacion de muestra vista anteriormente, sino que consisten en una página HTML obtenida del servidor, cuyo contenido se manipula con JavaScript que se ejecuta en el navegador (ésta pagina HTML le indica al navegar que debe obtener éste codigo JavaScript que va a manipular la página)._
+
+_La página de Notas de la aplicación vista tiene algo de parecido con las aplicaciones de estilo SPA, pero todavia no esta del todo lista. Aunque la lógica para renderizar las notas esta corriendo en el navegador, la página todavia usa la manera tradicional de agregar las notas nuevas. Los datos son enviados al servidor con un submit (envio) del formulario, y el servidor le dice al navegador que recargue la página Notas con un redireccionamiento._
+
+_Vamos un ejemplo de como sería una versión SPA de la aplicación de ejemplo. A primera vista, la aplicación se ve exactamente como la anterior. El codigo HTML es casi idéntico, pero el archivo JavaScript es diferente (spa.js) y hay un pequeño cambio in como la etiqueta **form** es definida:_
+
+![spa form](./img/25e.png)
+
+_El formulario no tiene atributos **action** o **method** para definir como y a dónde son enviados los datos ingresados._
+
+_Sí abrimos la pestaña Network, la limpiamos con el símbolo 🚫 y creamos una nueva nota, al enviarla vemos que el navegador realiza solo una petición al servidor._
+
+![spa send form](./img/26e.png)
+
+_La petición POST a la dirección `/new_note_spa` contiene la nueva nota como datos JSON con los campos **content**, que tiene el contenido de la nota, y **date** con la fecha:_
+
+~~~
+{
+  content: "single page app does not reload the whole page",
+  date: "2021-03-30T15:15:59.905Z"
+}
+~~~
+
+_El header (encabezado) Content-Type de la petición le dice al servidor que los datos incluidos estan representados con un formato JSON._
+
+![spa request headers](./img/27e.png)
+
+_Sin este encabezado, el servidor podría no saber cómo analizar (parsear) correctamente los datos._
+
+_El servidor responde con un status code [201 created](https://httpstatuses.com/201), indicando que la nota fue creada correctamente. Esta vez el servidor no le dice al navegador que redireccione y este se mantiene en la misma página, y no envía mas solicitudes HTTP._
+
+_La versión SPA de la aplicación no envia los datos del formulario de la manera tradicional, sino que utiliza el codigo JavaScript que recuperó del servidor. Miremos un poco este código JavaScript, aunque entenderlo al detalle no es importante ahora._
+
+~~~
+var form = document.getElementById('notes_form')
+form.onsubmit = function(e) {
+  e.preventDefault()
+
+  var note = {
+    content: e.target.elements[0].value,
+    date: new Date(),
+  }
+
+  notes.push(note)
+  e.target.elements[0].value = ''
+  redrawNotes()
+  sendToServer(note)
+}
+~~~
+
+_La instrucción `document.getElementById('notes_form')` recupera el elemento form que tenia el id `notes_form` y luego le registra un controlador de eventos (event handler) para manejar los eventos del envío de formulario. Este controlador de eventos, que es una función, lo primero que hace es llamar al método `e.preventDefault()`, que es un método del objeto evento (comunmente nombrado con la letra `e`), que evita el manejo por defecto que tiene el envío del formulario. Este método por defecto lo que haría es enviar los datos al servidor y causar una nueva solicitud GET que ahora no queremos que pase._
+
+_Luego el controlador de eventos crea una nueva nota en la variable `note` y luego la agrega al array `notes` cone el metodo push con la instrucción `notes.push(note)`, rerenderizando la lista de notas en la página con la función `redrawNotes()` y enviando la nota al servidor con la función `sendToServer(note)`._
+
+_El código de la función `sendToServer` sería el siguiente:_
+
+~~~
+var sendToServer = function(note) {
+  var xhttpForPost = new XMLHttpRequest()
+  // ...
+
+  xhttpForPost.open('POST', '/new_note_spa', true)
+  xhttpForPost.setRequestHeader(
+    'Content-type', 'application/json'
+  )
+  xhttpForPost.send(JSON.stringify(note))
+}
+~~~
+
+_El código determina que los datos son enviados con una petición HTTP POST y que el tipo de datos es JSON. Como vimos anteriormente el tipo de datos es indicado en el encabezado `Content-Type`. Luego estos datos son eviados como una cadena de texto tipo JSON convertidos con el método `JSON.stringify()`._
+
+_El código de la aplicación esta disponible en `https://github.com/szuviria/app-ejemplo`. Es importante aclarar que **la aplicación solo esta destinada solo a demostrar los conceptos del curso**. El código sigue un estilo de desarrollo deficiente en cierta medida y debe de usarse de ejemplo al crear sus propias aplicaciones. Lo mismo pasa con las URLs utilizadas. La URL `new_note_spa`, a donde son enviadas las nuevas notas, **no corresponde a buenas prácticas**._
