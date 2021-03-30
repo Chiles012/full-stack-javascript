@@ -48,7 +48,7 @@ _Cuando la pagina es recargada (presionando `F5` o en el simbolo ↺ del navegad
 
 _En una pantalla pequeña puede que se deba ampliar la ventana de la consola para verlo._
 
-_Clickeando en el primer evento hará que se nos muestre mas informacioón sobre lo que está sucediendo.:_
+_Clickeando en el primer evento hará que se nos muestre mas informacioón sobre lo que está sucediendo:_
 
 ![event](./img/3e.png)
 
@@ -411,7 +411,7 @@ _Los cambios hechos en la consola no son permantes. Al igual que con los cambios
 
 #### 🔹🔹🔹 Cargando una página que contiene JavaScript 🔹🔹🔹
 
-_Cuando abrimos en el navegador una pagina como la de notas que contiene JavaScript el diagrama de secuencia es el siguiente:_
+_Cuando abrimos en el navegador una página como la de notas que contiene JavaScript, el diagrama de secuencia es el siguiente:_
 
 ![secuence diagram js](./img/19e.png)
 
