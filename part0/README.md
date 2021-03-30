@@ -1,4 +1,4 @@
-## Parte 0: Fundamentos de las aplicaciones Web
+# Parte 0: Fundamentos de las aplicaciones Web
 
 _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se hablará de como evolucionó el desarrollo de aplicaciones web en las últimas décadas._
 
@@ -15,10 +15,11 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
     * [AJAX](#-ajax-)
     * [SPA o aplicación de una página](#-spa-o-aplicación-de-una-página-)
     * [Librerías de JavaScript](#-librerías-de-javascript-)
+    * [Desarrollo web full stack](#-desarrollo-web-full-stack-)
 
 
 
-### 🔹🔹🔹 Fundamentos de las aplicaciones Web 🔹🔹🔹
+## 🔹🔹🔹 Fundamentos de las aplicaciones Web 🔹🔹🔹
 
 _A continuación podremos observar unas imágenes que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas prácticas** _hoy en día._
 
@@ -36,7 +37,7 @@ _Es recomendable,en la pestaña Network, tener marcada la opcion de deshabilitar
 
 
 
-#### 🔹🔹🔹 HTTP GET 🔹🔹🔹
+### 🔹🔹🔹 HTTP GET 🔹🔹🔹
 
 _El servidor y el navegador web se comunican uno con el otro mediante el protocolo [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP). La pestaña Network muestra como se comunican el navegador y el servidor._
 
@@ -84,7 +85,7 @@ _Aunque es dificil de notar, la página HTML comienza a renderizarse antes de qu
 
 
 
-#### 🔹🔹🔹 Aplicaciones web tradicionales 🔹🔹🔹
+### 🔹🔹🔹 Aplicaciones web tradicionales 🔹🔹🔹
 
 _La página de inicio de la aplicacion de ejemplo funciona como una aplicacion web tradicional. Cuando uno entra a la página, el navegador recupera el documento HTML detallando la estructura y el contenido textual de la página desde el servidor._
 
@@ -127,7 +128,7 @@ _En este curso se utilizará Node.js y su framework Express para crear un servid
 
 
 
-#### 🔹🔹🔹 La lógica de la aplicación corriendo en el navegador 🔹🔹🔹
+### 🔹🔹🔹 La lógica de la aplicación corriendo en el navegador 🔹🔹🔹
 
 _La siguiente imagen corresponde a la página notes, el navegador realiza cuatro solicitudes HTTP:_
 
@@ -248,7 +249,7 @@ _La pestaña Console y el comando `console.log` se convertiran en algo muy famil
 
 
 
-#### 🔹🔹🔹 Control de eventos y funciones Callback 🔹🔹🔹
+### 🔹🔹🔹 Control de eventos y funciones Callback 🔹🔹🔹
 
 _La estructura de este código es un poco extraña:_
 
@@ -285,7 +286,7 @@ _Esta forma de llamar a los controladores de eventos en JavaScript es muy común
 
 
 
-#### 🔹🔹🔹 DOM o Modelo de Objetos del Documento 🔹🔹🔹
+### 🔹🔹🔹 DOM o Modelo de Objetos del Documento 🔹🔹🔹
 
 _Podemos pensar a las páginas HTML como estructuras de árbol._
 
@@ -336,7 +337,7 @@ _Por último, la rama del árbol de la variable `ul` es colocada en el lugar apr
 document.getElementById('notes').appendChild(ul)
 ~~~
 
-#### 🔹🔹🔹 Manipulando el Document-Object desde la consola 🔹🔹🔹
+### 🔹🔹🔹 Manipulando el Document-Object desde la consola 🔹🔹🔹
 
 _El nodo principal del DOM del cual derivan el resto de nodos en un documento HTML es llamado `document` object (objeto document). Podemos realizar varias operaciones en una pagina web usando la DOM-API. Podemos acceder al objeto `document` desde la pestaña Console:_
 
@@ -369,7 +370,7 @@ _Hay que aclarar que aunque la página se actualiza en el navegador con el nuevo
 
 
 
-#### 🔹🔹🔹 CSS 🔹🔹🔹
+### 🔹🔹🔹 CSS 🔹🔹🔹
 
 _El elemento **head** de el código HTML de la pagina de Notas contiene una etiqueta [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link), que le dice al navegador que debe recuperar un archivo de estilos CSS de la dirección main.css._
 
@@ -411,7 +412,7 @@ _La pestaña Elements de la consola puede ser usada para cambiar los estilos de 
 _Los cambios hechos en la consola no son permantes. Al igual que con los cambios en el DOM, si se quiere que los cambios de estilo sean permanentes deben ser guardados en el servidor._
 
 
-#### 🔹🔹🔹 Cargando una página que contiene JavaScript 🔹🔹🔹
+### 🔹🔹🔹 Cargando una página que contiene JavaScript 🔹🔹🔹
 
 _Cuando abrimos en el navegador una página como la de notas que contiene JavaScript, el diagrama de secuencia es el siguiente:_
 
@@ -425,7 +426,7 @@ _Cuando abrimos en el navegador una página como la de notas que contiene JavaSc
 
 
 
-#### 🔹🔹🔹 Formularios y HTTP POST 🔹🔹🔹
+### 🔹🔹🔹 Formularios y HTTP POST 🔹🔹🔹
 
 _A continuación veremos como se agrega una nueva nota a la lista._
 
@@ -485,7 +486,7 @@ _El servidor no graba la nueva nota en una base de datos, solamente se guarda en
 
 
 
-#### 🔹🔹🔹 AJAX 🔹🔹🔹
+### 🔹🔹🔹 AJAX 🔹🔹🔹
 
 _La página Notas de la aplicación sigue un estilo noventoso de desarrollo web y "utiliza AJAX". Como tal, estuvo en la cresta de la ola de la tecnología web de principios de los 2000._
 
@@ -502,7 +503,7 @@ _Lo que se denomina AJAX ahora es tan común que se da por sentado, y así el te
 
 
 
-#### 🔹🔹🔹 SPA o aplicación de una página 🔹🔹🔹
+### 🔹🔹🔹 SPA o aplicación de una página 🔹🔹🔹
 
 _En la app de ejemplo, la página de inicio trabaja como una página web tradicional: Toda la lógica esta en el servidor, y el navegador solo renderiza el HTML como se le indica._
 
@@ -583,7 +584,7 @@ _El código de la aplicación esta disponible en `https://github.com/szuviria/ap
 
 
 
-#### Librerías de JavaScript
+### 🔹🔹🔹 Librerías de JavaScript 🔹🔹🔹
 
 _La aplicación de ejemplo esta hecha con lo que se llama [vanilla JavaScript](https://medium.freecodecamp.org/is-vanilla-javascript-worth-learning-absolutely-c2c67140ac34), utilizando solo la DOM-API y JavaScript para manipular la estructura de las páginas._
 
@@ -598,3 +599,20 @@ _Sin embargo, la popularidad de Angular de desplomó después de que anunciaran 
 _Actualmente la herramienta mas populares para implementar la lógica del lado del navegador en el desarrollo de aplicaciones web es la librería de Facebook, [React](https://reactjs.org/). Durante éste curso, trataremos con React y la librería [Redux](https://github.com/reactjs/redux), que son utilizadas frecuentemente en conjunto._
 
 _El estado de React pare bastante sólido, pero el mundo de JavaScript está cambiando constantemente. Por ejemplo, recientemente ha llegado [VueJS](https://vuejs.org/) que ha despertado cierto interés._
+
+### 🔹🔹🔹 Desarrollo web full stack 🔹🔹🔹
+
+_Qué significa Desarrollo web full stack (Full stack web development)? Full stack es una ppalabra de moda de la que todos hablan pero que nadie sabe muy bien que significa. O al menos, no existe una definición acordada para el término._
+
+_Practicamente todas las aplicaciones web tiene dos "capas": El navegador, que está mas cerca del usuario, lo que sería la capa superior, y la del servidor la inferior. A menudo también hay una capa de base de datos debajo del servidor. Por eso, podemos pensar en la arquitectura de una aplicación web como una especie de pila (stack) de capas._
+
+_Frecuentemente también se habla sobre el [frontend](https://en.wikipedia.org/wiki/Front_and_back_ends) y el [backend](https://en.wikipedia.org/wiki/Front_and_back_ends). El navegador es el frontend, y JavaScript que corre en el navegador es el código frontend. El servidor por el otro lado es el backend._
+
+_En el contexto de éste curso, el desarrollo web full stack significa que haremos foco en todas las partes de la aplicacion: el frontend,el backend, y la base de datos. A veces, el software en el servidor y su sistema operativo son vista como parte del stack, pero no meteremos ahí._
+
+_Escribiremos el código del backend con JavaScript, usando el entorno de ejecución [Node.js](https://nodejs.org/en/). El uso del mismo lenguaje de programación en multiples capas del stack le da al desarrollo web una dimensión completamente nueva y para quién está empezando le facilita mucho las cosas. Sin embargo, no es un requisito del desarrollo web full stack utilizar el mismo lenguaje de programación (JavaScript) para todas las capas del stack._
+
+_Lo común era que los desarrolladores se especializaran en una capa del stack, por ejemplo, el backend. Las tecnologías en el backend y en el frontend son bastante diferentes. Con esta tendencia Full Stack, se ha vuelto común que los desarrolladores dominen todas las capas de la aplicación y la base de datos. A menudo, los desarrolladores full stack tambien deben tener suficientes habilidades de configuración y administración para operar su aplicación, por ejemplo, en la nube._
+
+
+
