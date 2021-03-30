@@ -3,6 +3,7 @@
 _En esta parte nos familiarizaremos con la librería React, la cual utilizaremos para escribir el código que correrá en el navegador. Empezaremos con algunas funciones y características de JavaScrip que son importantes para entender React._
 
 1. [JavaScript]()
+    * [Variables]()
 
 ## 🔹🔹🔹 JavaScript 🔹🔹🔹
 
@@ -23,3 +24,28 @@ _Es posible escribir código JavaScript en la consola de Node.js, que puede ser 
 _Como me ocurría a mi en un principio, es muy común confundir JavaScript con Java por nombre y sintaxis, pero cuando uno se interioriza en el mecanismo central del lenguaje son muy diferentes en realidad. Si uno viene de Java, el comportamiento de JavaScript puede parecer bastante extraño, especialmente si uno no trata de buscar sus caracteristicas._
 
 _Hay un artículo escrito por [Stephen Curtis](https://twitter.com/stephenthecurt) que puede ser leído [aquí](https://medium.com/@stephenthecurt/33-fundamentals-every-javascript-developer-should-know-13dd720a90d1), del cual nació este respositorio, llamado [33 conceptos que todo desarrollador de JAvaScript debería saber](https://github.com/leonardomso/33-js-concepts), el cual fue considerado uno de los mejores proyectos open source del año 2018, que recopila información de todos estos conceptos._
+
+_Más adelante desarrollaré estos conceptos en profundidas, asi y todo trataré de que se entiendan lo mejor posible a lo largo de este curso._
+
+### 🔹🔹🔹 Variables 🔹🔹🔹
+
+_En JavaScript hay varias formas de definir variables:_
+
+~~~
+const x = 1
+let y = 5
+
+console.log(x, y)   // 1, 5 son mostrados
+y += 10
+console.log(x, y)   // 1, 15 son mostrados
+y = 'sometext'
+console.log(x, y)   // 1, sometext son mostrados
+x = 4               // causa un error
+~~~
+
+_En realidad, [const](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/const) no define una variable, sino que define constante cuyo valor no se puede cambiar. Por otro lado, [let](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/let) define una variable normal._
+
+_En el ejemplo anterior, también vemos que el tipo de datos asignados a la variable puede cambiar durante la ejecución. Al principio `y` almacena un número entero y al final un string. Esta caracteristica del lenguaje se la suele llamar [tipado dinámico](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures)._
+
+_Es posible también definir variables en JavaScript utilizando la palabra reservada [var](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/var). `var` era, hace un tiempo atras, la única manera para definir variables. const y let fueron agregados recientemente en la version ES6. En situaciones especiales, var funciona de una manera direferente comparado con la definición de variables de la mayoría de los lenguajes. Durante este curso yo no recomiendo utilizar `var` sino utilizar const y let. Aunque está en inglés, recomiendo ver este video en Youtube: [var, let and const - What, why and how - ES6 JavaScript Features](https://www.youtube.com/watch?v=sjyJBL5fkp8) de [mpj](https://twitter.com/mpjme)._
+
