@@ -32,3 +32,11 @@ _Vale aclarar que este curso estará en constante actualización y que cualquier
         * [HTML](https://github.com/szuviria/fullstackspanish/tree/master/part0#html)
         * [CSS](https://github.com/szuviria/fullstackspanish/tree/master/part0#css)
         * [Mi primer formulario HTML](https://github.com/szuviria/fullstackspanish/tree/master/part0#mi-primer-formulario-html)
+
+#### PROXIMAMENTE
+
+**Parte 1: Introducción a React**
+1. [Introducción a React](https://github.com/szuviria/fullstackspanish/tree/master/part1#-introducción-a-react-)
+2. [JavaScript](https://github.com/szuviria/fullstackspanish/tree/master/part1#-javascript-)
+3. [Estado del componente, manejo de eventos](https://github.com/szuviria/fullstackspanish/tree/master/part1#-estados-del-componente-manejor-de-eventos-)
+4. [Un estado mas complejo, depurando aplicaciones React](https://github.com/szuviria/fullstackspanish/tree/master/part1#-un-estado-mas-complejo-depurando-aplicaciones-react-)
