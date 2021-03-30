@@ -25,3 +25,4 @@ _Vale aclarar que este curso estará en constante actualización y que cualquier
     * [Formularios y HTTP POST](https://github.com/szuviria/fullstackspanish/tree/master/part0#-formularios-y-http-post-)
     * [AJAX](https://github.com/szuviria/fullstackspanish/tree/master/part0#-ajax-)
     * [SPA o aplicación de una página](https://github.com/szuviria/fullstackspanish/tree/master/part0#-spa-o-aplicación-de-una-página-)
+    * [Librerías de JavaScript](https://github.com/szuviria/fullstackspanish/tree/master/part0#-librerías-de-javascript-)

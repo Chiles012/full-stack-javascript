@@ -14,12 +14,13 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
     * [Formularios y HTTP POST](#-formularios-y-http-post-)
     * [AJAX](#-ajax-)
     * [SPA o aplicación de una página](#-spa-o-aplicación-de-una-página-)
+    * [Librerías de JavaScript](#-librerías-de-javascript-)
 
 
 
 ### 🔹🔹🔹 Fundamentos de las aplicaciones Web 🔹🔹🔹
 
-_A continuación podremos observar unas imágenes que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas practicas** _hoy en día._
+_A continuación podremos observar unas imágenes que servirán para demostrar conceptos básicos pero que no quieren decir que sean ejemplos de como las aplicaciones Web deben ser. Por el contrario, muestran viejas tecnicas de desarrollo web que pueden considerarse_ **malas prácticas** _hoy en día._
 
 _Durante todo el curso se estará utilizando el navegador Chrome._
 
@@ -579,3 +580,21 @@ var sendToServer = function(note) {
 _El código determina que los datos son enviados con una petición HTTP POST y que el tipo de datos es JSON. Como vimos anteriormente el tipo de datos es indicado en el encabezado `Content-Type`. Luego estos datos son eviados como una cadena de texto tipo JSON convertidos con el método `JSON.stringify()`._
 
 _El código de la aplicación esta disponible en `https://github.com/szuviria/app-ejemplo`. Es importante aclarar que **la aplicación solo esta destinada solo a demostrar los conceptos del curso**. El código sigue un estilo de desarrollo deficiente en cierta medida y debe de usarse de ejemplo al crear sus propias aplicaciones. Lo mismo pasa con las URLs utilizadas. La URL `new_note_spa`, a donde son enviadas las nuevas notas, **no corresponde a buenas prácticas**._
+
+
+
+#### Librerías de JavaScript
+
+_La aplicación de ejemplo esta hecha con lo que se llama [vanilla JavaScript](https://medium.freecodecamp.org/is-vanilla-javascript-worth-learning-absolutely-c2c67140ac34), utilizando solo la DOM-API y JavaScript para manipular la estructura de las páginas._
+
+_En lugar de usar JavaScript y la DOM-API solamente, existen diferentes librerías que contienen herramientas que facilitan el trabajo al manipular páginas en comparación con la DOM-API. Una de estas librerías que es muy popular es [JQuery](https://jquery.com/)._
+
+_JQuery fue desarrollada cuando las aplicaciones web seguían principalmente el estilo tradicional donde el servidor generaba las páginas HTML, cuya funcionabilidad se mejoró del lado del navegador usando JavaScript escrito con JQuery. Una de las razones del éxtio de JQuery fue la compatibilidad entre navegadores. La librería funcionaba independientemente del navegador o de la empresa que lo fabricaba, por lo que no había necesidad de soluciones específicas para el navegador. Hoy en día el uso de Jquery no está justificado con los avances que tuvo VanillaJS, ya que los navegadores más populares generalmente soportan muy bien las funcionalidades básicas._
+
+_El auge que tuvieron las SPAs trajo formas más "modernas" del desarrollo web que JQuery. La favorita en un principio fue [BackboneJS](http://backbonejs.org/). Luego de su [lanzamiento](https://github.com/angular/angular.js/blob/master/CHANGELOG.md#100-temporal-domination-2012-06-13) en 2012, [AngularJS](https://angularjs.org/) de Google se convirtió rapidamente casi en el estandar de facto del desarrollo web moderno._
+
+_Sin embargo, la popularidad de Angular de desplomó después de que anunciaran en octubre del 2014 que el soporte para la version 1 se terminaría, y Angular 2 no sería retrocompatible con la primera versión. Angular 2 y las versiones más nuevas no han sido bien recibidas._
+
+_Actualmente la herramienta mas populares para implementar la lógica del lado del navegador en el desarrollo de aplicaciones web es la librería de Facebook, [React](https://reactjs.org/). Durante éste curso, trataremos con React y la librería [Redux](https://github.com/reactjs/redux), que son utilizadas frecuentemente en conjunto._
+
+_El estado de React pare bastante sólido, pero el mundo de JavaScript está cambiando constantemente. Por ejemplo, recientemente ha llegado [VueJS](https://vuejs.org/) que ha despertado cierto interés._
