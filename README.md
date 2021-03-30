@@ -4,7 +4,7 @@ _Este proyecto sirve como una introducción al desarrollo moderno de aplicacione
 
 _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de MongoDB para persistir los datos de la aplicación, como así también TypeScript y finalmente una introducción a CI/CD._
 
-_Esta es una recopilación hecha por mi de algunos de los conocimientos que fui adquiriendo, y está estructurado principalmente con el contenido desarrollado en el curso Full Stack del departamento de Ciencias de la Computación de la Universidad de Helsinki del año 2020_
+_Esta es una recopilación hecha por mi de algunos de los conocimientos que fui adquiriendo, y está estructurado principalmente con el contenido desarrollado en el curso Full Stack del departamento de Ciencias de la Computación de la Universidad de Helsinki del año 2020._
 
 _Vale aclarar que este curso estará en constante actualización y que cualquier aporte es bienvenido._
 
@@ -27,3 +27,8 @@ _Vale aclarar que este curso estará en constante actualización y que cualquier
     * [SPA o aplicación de una página](https://github.com/szuviria/fullstackspanish/tree/master/part0#-spa-o-aplicación-de-una-página-)
     * [Librerías de JavaScript](https://github.com/szuviria/fullstackspanish/tree/master/part0#-librerías-de-javascript-)
     * [Desarrollo web full stack](https://github.com/szuviria/fullstackspanish/tree/master/part0#-desarrollo-web-full-stack-)
+    * [Fatiga JavaScript](https://github.com/szuviria/fullstackspanish/tree/master/part0#-fatiga-javascript-)
+    * [Tutoriales](https://github.com/szuviria/fullstackspanish/tree/master/part0#-tutoriales-)
+        * [HTML](https://github.com/szuviria/fullstackspanish/tree/master/part0#html)
+        * [CSS](https://github.com/szuviria/fullstackspanish/tree/master/part0#css)
+        * [Mi primer formulario HTML](https://github.com/szuviria/fullstackspanish/tree/master/part0#mi-primer-formulario-html)

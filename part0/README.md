@@ -16,6 +16,11 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
     * [SPA o aplicación de una página](#-spa-o-aplicación-de-una-página-)
     * [Librerías de JavaScript](#-librerías-de-javascript-)
     * [Desarrollo web full stack](#-desarrollo-web-full-stack-)
+    * [Fatiga JavaScript](#-fatiga-javascript-)
+    * [Tutoriales](#-tutoriales-)
+        * [HTML](#html)
+        * [CSS](#css)
+        * [Mi primer formulario HTML](#mi-primer-formulario-html)    
 
 
 
@@ -604,11 +609,11 @@ _El estado de React pare bastante sólido, pero el mundo de JavaScript está cam
 
 _Qué significa Desarrollo web full stack (Full stack web development)? Full stack es una ppalabra de moda de la que todos hablan pero que nadie sabe muy bien que significa. O al menos, no existe una definición acordada para el término._
 
-_Practicamente todas las aplicaciones web tiene dos "capas": El navegador, que está mas cerca del usuario, lo que sería la capa superior, y la del servidor la inferior. A menudo también hay una capa de base de datos debajo del servidor. Por eso, podemos pensar en la arquitectura de una aplicación web como una especie de pila (stack) de capas._
+_Practicamente todas las aplicaciones web tienen dos "capas": El navegador, que está mas cerca del usuario, lo que sería la capa superior, y la del servidor la inferior. A menudo también hay una capa de base de datos debajo del servidor. Por eso, podemos pensar en la arquitectura de una aplicación web como una especie de pila (stack) de capas._
 
 _Frecuentemente también se habla sobre el [frontend](https://en.wikipedia.org/wiki/Front_and_back_ends) y el [backend](https://en.wikipedia.org/wiki/Front_and_back_ends). El navegador es el frontend, y JavaScript que corre en el navegador es el código frontend. El servidor por el otro lado es el backend._
 
-_En el contexto de éste curso, el desarrollo web full stack significa que haremos foco en todas las partes de la aplicacion: el frontend,el backend, y la base de datos. A veces, el software en el servidor y su sistema operativo son vista como parte del stack, pero no meteremos ahí._
+_En el contexto de éste curso, el desarrollo web full stack significa que haremos foco en todas las partes de la aplicación: el frontend,el backend, y la base de datos. A veces, el software en el servidor y su sistema operativo son vista como parte del stack, pero no nos meteremos ahí._
 
 _Escribiremos el código del backend con JavaScript, usando el entorno de ejecución [Node.js](https://nodejs.org/en/). El uso del mismo lenguaje de programación en multiples capas del stack le da al desarrollo web una dimensión completamente nueva y para quién está empezando le facilita mucho las cosas. Sin embargo, no es un requisito del desarrollo web full stack utilizar el mismo lenguaje de programación (JavaScript) para todas las capas del stack._
 
@@ -616,3 +621,27 @@ _Lo común era que los desarrolladores se especializaran en una capa del stack, 
 
 
 
+### 🔹🔹🔹 Fatiga JavaScript 🔹🔹🔹
+
+_Así y todo, el desarrollo web Full Stack es un desafio. Pasan muchas cosas, en muchos lugares al mismo tiempo, y la depuración (debugging) es un poco más dificil que con las aplicaciones de escritorio normales. Dadas las características del lenguaje, JavaScript no siempre funciona como esperamos (en comparación con muchos otros lenguajes), y la forma asincrónica en que funcionan sus entornos de ejecución hace que nos enfrentemos a todo tipo de desafíos. Comunicarse e la web requiere conocimientos del protocolo HTTP. También se deben manejar las bases de datos y la administración y configuración del servidor. También seria bueno saber suficiente CSS para que las aplicaciones sean al menos algo presentables._
+
+_El mundo de JavaScript evoluciona rápidamente, lo que trae así su propio conjunto de desafíos. Las herramientas, las librerías y el propio lenguaje están en constante desarrollo. Y aquellos estan empezando a cansarse de todo esto han adoptado un término para esto: [fatiga](https://auth0.com/blog/how-to-manage-javascript-fatigue/) [de JavaScript](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4)._
+
+_Puede que a lo largo de este curso se sufra la fatiga de JavaScript, como me pasó a mi. Por lo que tratare de suavizar lo mejor que pueda la curva de aprendizaje, asi empezaremos con la codificación en lugar de la configuración. Asi y todo el orden que yo haya elegido para presentar la información no quiere decir, bajo ningún punto de vista, que sea el mejor por eso repetire nuevamente que cualquier consejo y aporte es totalmente bienvenido y agradecido._
+
+
+
+### 🔹🔹🔹 Tutoriales 🔹🔹🔹
+
+
+#### HTML
+
+[Tutorial](https://developer.mozilla.org/es/docs/Learn/Forms/Your_first_form)
+
+#### CSS 
+
+[Tutorial](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics)
+
+#### Mi primer formulario HTML
+
+[Tutorial](https://developer.mozilla.org/es/docs/Learn/Forms/Your_first_form)
