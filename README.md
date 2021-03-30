@@ -70,7 +70,7 @@ _Vale aclarar que este curso estará en constante actualización y que cualquier
 1. [Arquitectura Flux y Redux]()
 2. [Muchos reducers]()
 3. [Comunicación con el servidor en una aplicación redux]()
-4. [connect]
+4. [connect]()
 
 **Parte 7: React rounter, custom hooks, estilo de la aplicación con CSS y Webpack**
 1. [React-router]()
