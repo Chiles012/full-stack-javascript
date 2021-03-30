@@ -2,7 +2,7 @@
 
 _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se hablará de como evolucionó el desarrollo de aplicaciones web en las últimas décadas._
 
-  1. [Fundamentos de las aplicaciones Web](#-fundamentos-de-las-aplicaciones-web-)
+1. [Fundamentos de las aplicaciones Web](#-fundamentos-de-las-aplicaciones-web-)
     * [HTTP GET](#-http-get-)
     * [Aplicaciones web tradicionales](#-aplicaciones-web-tradicionales-)
     * [La lógica de la aplicación corriendo en el navegador](#-la-lógica-de-la-aplicación-corriendo-en-el-navegador-)
