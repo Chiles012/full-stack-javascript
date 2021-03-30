@@ -12,6 +12,7 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
     * [CSS](#-css-)
     * [Cargando una página que contiene JavaScript](#-cargando-una-página-que-contiene-javascript)
     * [Formularios y HTTP POST](#-formularios-y-http-post-)
+    * [AJAX](#-ajax-)
 
 
 
@@ -479,3 +480,21 @@ notes.push({
 _El objeto Note tiene dos campos: **content** que contiene el contenido actual de la nota, y **date** que contiene la fecha y la hora en la cual la nota fue creada._
 
 _El servidor no graba la nueva nota en una base de datos, solamente se guarda en espacio de memoria, por lo que al reiniciar el servidor las nuevas notas agregadas desaparecerán._
+
+
+
+#### 🔹🔹🔹 AJAX 🔹🔹🔹
+
+_La página Notas de la aplicación sigue un estilo noventoso de desarrollo web y "utiliza AJAX". Como tal, estuvo en la cresta de la ola de la tecnología web de principios de los 2000._
+
+_AJAX (Asynchronous JavaScript and XML), o JavaScript y XML asíncrono, es un termino introducido en febrero del 2005 gracias a los avances en las tecnologías de los navegadores para describir un nuevo enfoque revolucionario que permitió la búsqueda de contenido en páginas web utilizando JavaScript incluido dentro del HTML, sin la necesidad de volver a recargar la página._
+
+_Antes de esto, todas las páginas funcionaban como la aplicación web tradicional vista anteriormente en este capítulo. Todos los datos que se muestran en la página se obtuvieron con el código HTML generado por el servidor._
+
+_La pagina Notas utiliza AJAX para recuperar los datos de las notas. El envio del formulario utiliza el mecanismo tradicional._
+
+_Las URLs de la aplicación son un claro reflejo de los viejos tiempos sin preocupaciones. Los datos JSON son recuperados directamente de la url https://fullstack-exampleapp.herokuapp.com/data.json y las nuevas notas son enviadas a la URL https://fullstack-exampleapp.herokuapp.com/new\_note._
+_Hoy en dia URLs como estas no son concideradas aceptables, ya que no siguen las conveciones de las APIs [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_Web_services), que se veran en profundidad en la parte 3._
+
+_Lo que se denomina AJAX ahora es tan común que se da por sentado, y así el termino se desvanecio en el olvido y la nueva generación ni siquiera escuchó hablar de esto._
+
