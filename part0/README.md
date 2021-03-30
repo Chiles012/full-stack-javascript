@@ -11,10 +11,9 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
     * [Manipulando el Document-Object desde la consola](#-manipulando-el-document-object-desde-la-consola-)
     * [CSS](#-css-)
     * [Cargando una página que contiene JavaScript](#-cargando-una-página-que-contiene-javascript)
+    * [Formularios y HTTP POST](#-formularios-y-http-post-)
 
 
-
-<div id="#fundamentos-apps-web" />
 
 ### 🔹🔹🔹 Fundamentos de las aplicaciones Web 🔹🔹🔹
 
@@ -424,3 +423,59 @@ _Cuando abrimos en el navegador una página como la de notas que contiene JavaSc
 
 
 #### 🔹🔹🔹 Formularios y HTTP POST 🔹🔹🔹
+
+_A continuación veremos como se agrega una nueva nota a la lista._
+
+_La página notas contiene un elemento [form](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form)._
+
+![form element](./img/20e.png)
+
+_Cuando el botón del formulario es presionado, el navegador enviará la entrada del usuario al servidor. Veamos como se ve el envio del formulario en la pestaña Network:_
+
+![form submit network tab](./img/21e.png)
+
+_Enviar el formulario causa **cinco** peticiones HTTP. La primera equivale al evento de enviar el formulario. Vemamos que muestra:_
+
+![form submit headers](./img/22e.png)
+
+_Esta es una peticion HTTP POST realizada a la direccion del servidor `/new_note`. El servidor responde con un HTTP status code 302, que significa **encontrado**. Esto es una [redirección a un URL](https://en.wikipedia.org/wiki/URL_redirection), con la cual el servidor le solicita al navegador que realice una solicitud HTTP GET a la dirección que esta definida en los headers de la respuesta: `Location: /notes`_
+
+_Así, el navegador recarga la página Notes. La recarga genera tres solicitudes HTTP más: La de recuperar la hoja de estilos (main.css), la del codigo JavaScript, y la de los datos en crudo de las notas (data.json)._
+
+_La pestaña Network también muestra la información enviada en el formulario:_
+
+![form submit data](./img/23e.png)
+
+_El tag Form tiene como atributos **action** y **method**, que definen que el envio del formulario debe hacerse como una petición POST a la dirección `/new_notes`._
+
+![form attr](./img/24e.png)
+
+_El código en el servidor que responde a la petición POST es bastante simple (Nota: Este código esta en el servidor y no en el código JavaScript recuperado por el navegador):_
+
+~~~
+app.post('/new_note', (req, res) => {
+  notes.push({
+    content: req.body.note,
+    date: new Date(),
+  })
+
+  return res.redirect('/notes')
+})
+~~~
+
+_Los datos son enviados en el [body](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST)(cuerpo) de la petición POST._
+
+_El servidor puede acceder a los datos accediendo al campo `req.body` del objeto de la solicitud `req`._
+
+_El servidor crea un objeto para la nueva nota, y lo agrega al array llamado `notes`._
+
+~~~
+notes.push({
+  content: req.body.note,
+  date: new Date(),
+})
+~~~
+
+_El objeto Note tiene dos campos: **content** que contiene el contenido actual de la nota, y **date** que contiene la fecha y la hora en la cual la nota fue creada._
+
+_El servidor no graba la nueva nota en una base de datos, solamente se guarda en espacio de memoria, por lo que al reiniciar el servidor las nuevas notas agregadas desaparecerán._
