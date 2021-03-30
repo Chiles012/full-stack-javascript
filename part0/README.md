@@ -13,6 +13,7 @@ _En esta parte se desarrollarán los conceptos basicos del desarrollo web y se h
     * [Cargando una página que contiene JavaScript](#-cargando-una-página-que-contiene-javascript)
     * [Formularios y HTTP POST](#-formularios-y-http-post-)
     * [AJAX](#-ajax-)
+    * [SPA o aplicación de una página](#-spa-o-aplicación-de-una-página-)
 
 
 
@@ -500,7 +501,7 @@ _Lo que se denomina AJAX ahora es tan común que se da por sentado, y así el te
 
 
 
-#### 🔹🔹🔹 SPA, aplicaciones de una página 🔹🔹🔹
+#### 🔹🔹🔹 SPA o aplicacion de una página 🔹🔹🔹
 
 _En la app de ejemplo, la página de inicio trabaja como una página web tradicional: Toda la lógica esta en el servidor, y el navegador solo renderiza el HTML como se le indica._
 
