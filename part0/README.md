@@ -501,7 +501,7 @@ _Lo que se denomina AJAX ahora es tan común que se da por sentado, y así el te
 
 
 
-#### 🔹🔹🔹 SPA o aplicacion de una página 🔹🔹🔹
+#### 🔹🔹🔹 SPA o aplicación de una página 🔹🔹🔹
 
 _En la app de ejemplo, la página de inicio trabaja como una página web tradicional: Toda la lógica esta en el servidor, y el navegador solo renderiza el HTML como se le indica._
 
