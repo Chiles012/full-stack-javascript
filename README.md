@@ -38,7 +38,7 @@ _Vale aclarar que este curso estará en constante actualización y que cualquier
 **Parte 1: Introducción a React**
 1. [JavaScript]() 
 2. [Introducción a React]()
-3. [Estado del componente, manejo de eventos]())
+3. [Estado del componente, manejo de eventos]()
 4. [Un estado mas complejo, depurando aplicaciones React]()
 
 **Parte 2: Comunicación con el servidor**
