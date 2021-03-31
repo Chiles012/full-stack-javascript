@@ -2,8 +2,8 @@
 
 _En esta parte nos familiarizaremos con la librería React, la cual utilizaremos para escribir el código que correrá en el navegador. Empezaremos con algunas funciones y características de JavaScrip que son importantes para entender React._
 
-1. [JavaScript]()
-    * [Variables]()
+1. [JavaScript](#-javascript-)
+    * [Variables](#-variables-)
 
 ## 🔹🔹🔹 JavaScript 🔹🔹🔹
 
