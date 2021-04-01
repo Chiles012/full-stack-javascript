@@ -6,8 +6,6 @@ _Este proyecto sirve como una introducción al desarrollo moderno de aplicacione
 
 _Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de MongoDB para persistir los datos de la aplicación, como así también CI/CD y finalmente una introducción a TypeScript y React-Native._
 
-_Esta es una recopilación hecha por mi de algunos de los conocimientos que fui adquiriendo, y está estructurado principalmente con el contenido desarrollado en el curso Full Stack del departamento de Ciencias de la Computación de la Universidad de Helsinki del año 2020._
-
 _Vale aclarar que este curso estará en constante actualización y que cualquier aporte es bienvenido._
 
 
