@@ -1,8 +1,10 @@
 # Full Stack Javascript
 
+![cover](./img/cover.png)
+
 _Este proyecto sirve como una introducción al desarrollo moderno de aplicaciones web con JavaScript, donde el foco principal esta puesto en construir SPAs (single page applications), o aplicaciones de una sola página, con ReactJS que utilicen APIs REST construidas con Node.js. En éste proyecto tambien se agregará una sección sobre GraphQL, una alternativa moderna a APIs REST._
 
-_Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de MongoDB para persistir los datos de la aplicación, como así también TypeScript y finalmente una introducción a CI/CD._
+_Se cubrirá algo de testing, configuración y manejo de entorno, y el uso de MongoDB para persistir los datos de la aplicación, como así también CI/CD y finalmente una introducción a TypeScript y React-Native._
 
 _Esta es una recopilación hecha por mi de algunos de los conocimientos que fui adquiriendo, y está estructurado principalmente con el contenido desarrollado en el curso Full Stack del departamento de Ciencias de la Computación de la Universidad de Helsinki del año 2020._
 
