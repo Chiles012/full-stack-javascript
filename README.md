@@ -58,7 +58,7 @@ _Vale aclarar que este curso estará en constante actualización y que cualquier
 1. [Estructura de las aplicaciones backend, introducción al testing]()
 2. [Testeando el backend]()
 3. [Administración de usuarios]()
-4. [Autenticacion con Token]()
+4. [Autenticación con Token]()
 
 **Parte 5: Testeando aplicaciones React**
 1. [Login en el frontend]()
